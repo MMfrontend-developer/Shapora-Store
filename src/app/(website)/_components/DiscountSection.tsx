@@ -49,7 +49,6 @@ export default function DiscountSection() {
         alt="Summer Sale"
         fill
         className="object-cover"
-        // style={{ backgroundPosition: "top" }}
         priority
       />
 

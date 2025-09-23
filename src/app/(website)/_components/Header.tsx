@@ -3,7 +3,7 @@
 import React from "react";
 import CartIcon from "./CartIcon";
 import { usePathname } from "next/navigation";
-import { ShoppingCart, User, X, Eye, EyeOff } from "lucide-react";
+import { User, X, Eye, EyeOff } from "lucide-react";
 import {
   Dialog,
   DialogContent,
