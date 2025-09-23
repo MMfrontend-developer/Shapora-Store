@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import CartIcon from "./CartIcon";
 import { usePathname } from "next/navigation";
 import { ShoppingCart, User, X, Eye, EyeOff } from "lucide-react";
 import {
@@ -40,11 +41,11 @@ const Header = () => {
   const [showPassword, setShowPassword] = React.useState(false);
   return (
     <div className="w-full border-b bg-white shadow-md sticky top-0 z-50">
-      <header className="container flex items-center justify-between px-6 py-4 mx-auto">
+        <header className="container flex items-center justify-between px-4 py-1 sm:px-6 sm:py-4 mx-auto">
         {/* Logo */}
         <img
           src="/shapora-logo.png"
-          className="h-20 w-auto sm:h-15 sm:w-20"
+          className="h-20 w-auto sm:h-16 sm:w-20"
           alt="Shapora Logo"
         />
 
@@ -57,7 +58,7 @@ const Header = () => {
               className={`text-base font-semibold transition-colors ${
                 pathname === link.href
                   ? "text-orange-500 border-b-2 border-orange-500"
-                  : "text-gray-700 hover:text-orange-500"
+                  : "text-base-700 hover:text-orange-500"
               }`}
             >
               {link.label}
@@ -153,7 +154,7 @@ const Header = () => {
           <Sheet>
             <SheetTrigger asChild>
               <button className="p-2 rounded-full hover:bg-gray-100">
-                <ShoppingCart size={24} />
+                 <CartIcon />
               </button>
             </SheetTrigger>
             <SheetContent
@@ -215,7 +216,7 @@ const Header = () => {
                     className={`text-lg font-semibold transition-all duration-300 ${
                       pathname === link.href
                         ? "text-orange-500 border-l-3 border-orange-500 pl-1 hover:translate-x-2"
-                        : "text-gray-700 hover:text-orange-500 hover:translate-x-2"
+                        : "text-base-700 hover:text-orange-500 hover:translate-x-2"
                     }`}
                   >
                     {link.label}
@@ -226,7 +227,7 @@ const Header = () => {
           </Sheet>
         </div>
 
-        {/* Icons */}
+        {/*Desktop Icons */}
         <div className="hidden md:flex items-center space-x-4">
           {/* User Modal */}
           <Dialog>
@@ -314,7 +315,7 @@ const Header = () => {
           <Sheet>
             <SheetTrigger asChild>
               <button className="p-2 rounded-full hover:bg-gray-100">
-                <ShoppingCart size={24} />
+                 <CartIcon />
               </button>
             </SheetTrigger>
             <SheetContent

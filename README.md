@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+📦 Shapora – Modern E-Commerce Store
 
-## Getting Started
+Shapora is a modern e-commerce web application built with Next.js 15, TypeScript, and Tailwind CSS. It features a responsive UI, dynamic product pages, authentication modals, and a sleek shopping cart drawer.
 
-First, run the development server:
+🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+⚡ Next.js 15 + App Router – optimized for performance & SEO
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🎨 Tailwind CSS – fully responsive, utility-first styling
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🛒 Shopping Cart Drawer with smooth animations
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+👤 Authentication Modal (Login form with validation-ready inputs)
 
-## Learn More
+📱 Responsive Navigation – desktop nav + mobile hamburger menu
 
-To learn more about Next.js, take a look at the following resources:
+🎭 Animations – subtle fade & slide transitions for a modern feel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🔗 Active Link Highlighting – clear user navigation state
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🛠️ Tech Stack
 
-## Deploy on Vercel
+Framework: Next.js 15 (App Router)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Language: TypeScript
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Styling: Tailwind CSS
+
+Icons: Lucide Icons
+
+UI Components: ShadCN UI (Dialog, Sheet, Button, Input, etc.)
