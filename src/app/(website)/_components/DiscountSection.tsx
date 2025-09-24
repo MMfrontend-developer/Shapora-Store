@@ -62,7 +62,7 @@ export default function DiscountSection() {
           <span className="text-orange-500">50% Off</span>
         </h2>
         <p className="mb-8 text-lg md:text-xl">
-          Step into summer with sun-ready styles at can't-miss prices.
+          Step into summer with sun-ready styles at can&apos;t-miss prices.
         </p>
 
         {/* Countdown Timer */}
