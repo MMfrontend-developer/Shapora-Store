@@ -7,6 +7,10 @@ import Categories from "./_components/Categories";
 import FeaturedCloth from "./_components/FeaturedCloth";
 import DiscountSection from "./_components/DiscountSection";
 import Reviews from "./_components/Reviews";
+import HowItWorks from "./_components/HowItWorks";
+import StoreBenefits from "./_components/StoreBenefits";
+import Footer from "./_components/Footer";
+import Partners from "./_components/Partners";
 
 export default function HomePage() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -77,6 +81,18 @@ export default function HomePage() {
 
         {/* Reviews Section */}
        <Reviews />  
+
+        {/* How It Works Section */}
+       <HowItWorks />
+
+        {/* Store Benefits Section */}
+       <StoreBenefits /> 
+
+ {/* Partners Section */}
+       <Partners />
+
+        {/* Footer Section */}
+       <Footer /> 
     </main>
   );
 }

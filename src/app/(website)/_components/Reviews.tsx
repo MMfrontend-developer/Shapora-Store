@@ -33,7 +33,7 @@ export default function Reviews() {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16  bg-gray-50">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold mb-10"> ⭐ What Our Shoppers Say</h2>
 
@@ -44,8 +44,8 @@ export default function Reviews() {
                 key={review.id}
                 className="md:basis-1/2 lg:basis-1/3"
               >
-                <div className="bg-indigo-50 rounded-2xl shadow-md p-6 flex flex-col min-h-[360px] h-full">
-                  <p className="text-gray-900 italic flex-grow">
+                <div className="bg-indigo-50 rounded-2xl shadow-md p-6 flex flex-col min-h-[360px] h-full w-[320px] max-w-full mx-auto">
+                  <p className="text-gray-900 italic flex-grow font-bold">
                     “{review.text}”
                   </p>
 
