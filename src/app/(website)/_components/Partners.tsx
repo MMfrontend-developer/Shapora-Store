@@ -11,11 +11,11 @@ import {
 
 export default function Partners() {
   const partners = [
-    { id: 1, name: "Nike", logo: "/Nike-logo.png" },
+    { id: 1, name: "Nike", logo: "/Nike-Logo.png" },
     { id: 2, name: "Adidas", logo: "/Addidas-logo.png" },
-    { id: 3, name: "Zara", logo: "/Zara-logo.png" },
+    { id: 3, name: "Zara", logo: "/Zara-Logo.png" },
     { id: 4, name: "H&M", logo: "/hm-logo.png" },
-    { id: 5, name: "Gucci", logo: "/Gucci-logo.png" },
+    { id: 5, name: "Gucci", logo: "/Gucci-Logo.png" },
   ];
 
   return (
