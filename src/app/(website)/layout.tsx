@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Header from "./_components/Header";
 export const metadata: Metadata = {
-  title: "My E-Commerce Store",
+  title: "Shapora E-Commerce Store",
   description: "An e-commerce website built with Next.js and TailwindCSS",
 };
 

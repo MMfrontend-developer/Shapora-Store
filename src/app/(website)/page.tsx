@@ -11,14 +11,11 @@ import HowItWorks from "./_components/HowItWorks";
 import StoreBenefits from "./_components/StoreBenefits";
 import Footer from "./_components/Footer";
 import Partners from "./_components/Partners";
+import PromoBanner from "./_components/PromoBannerProps";
 
 export default function HomePage() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [
-    "/hero-1.jpg",
-    "/hero-2.jpg",
-    "/hero-3.jpg"
-  ];
+  const images = ["/hero-1.jpg", "/hero-2.jpg", "/hero-3.jpg"];
 
   useEffect(() => {
     const interval = setInterval(
@@ -30,12 +27,14 @@ export default function HomePage() {
 
   return (
     <main>
-        {/* Promo Banner */}
-      <div className="w-full bg-black text-white text-center py-3 text-sm font-medium">
-        🎉 Get <span className="text-orange-500 font-bold">15% off</span> on your first order!
-      </div>
+      {/* Promo Banner */}
+      <PromoBanner
+        prefix="Get"
+        highlight="15% off"
+        suffix="on your first order!"
+      />
 
-       {/* Hero Slideshow */}
+      {/* Hero Slideshow */}
       <section className="relative w-full h-[80vh]">
         {images.map((src, index) => (
           <div
@@ -43,7 +42,11 @@ export default function HomePage() {
             className={`absolute inset-0 transition-opacity duration-1000 ${
               index === currentIndex ? "opacity-100" : "opacity-0"
             }`}
-            style={{ backgroundImage: `url(${src})`, backgroundSize: "cover", backgroundPosition: "top" }}
+            style={{
+              backgroundImage: `url(${src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "top",
+            }}
           />
         ))}
 
@@ -56,7 +59,8 @@ export default function HomePage() {
             Timeless Fashion for the Modern Wardrobe
           </h1>
           <p className="mt-5 text-lg md:text-xl max-w-2xl">
-            Discover timeless fashion for <span className="font-semibold">Men</span>,{" "}
+            Discover timeless fashion for{" "}
+            <span className="font-semibold">Men</span>,{" "}
             <span className="font-semibold">Women</span>, and{" "}
             <span className="font-semibold">Kids</span> – crafted for comfort,
             designed for confidence.
@@ -67,32 +71,32 @@ export default function HomePage() {
         </div>
       </section>
 
-       {/* New Arrivals */}
-            <NewArrivals />
+      {/* New Arrivals */}
+      <NewArrivals />
 
-              {/* Categories Section */}
+      {/* Categories Section */}
       <Categories />
 
-       {/* FeaturedCloth Section */}
-       <FeaturedCloth />
+      {/* FeaturedCloth Section */}
+      <FeaturedCloth />
 
-       {/* Discount Section */}
-       <DiscountSection />
+      {/* Discount Section */}
+      <DiscountSection />
 
-        {/* Reviews Section */}
-       <Reviews />  
+      {/* Reviews Section */}
+      <Reviews />
 
-        {/* How It Works Section */}
-       <HowItWorks />
+      {/* How It Works Section */}
+      <HowItWorks />
 
-        {/* Store Benefits Section */}
-       <StoreBenefits /> 
+      {/* Store Benefits Section */}
+      <StoreBenefits />
 
- {/* Partners Section */}
-       <Partners />
+      {/* Partners Section */}
+      <Partners />
 
-        {/* Footer Section */}
-       <Footer /> 
+      {/* Footer Section */}
+      <Footer />
     </main>
   );
 }

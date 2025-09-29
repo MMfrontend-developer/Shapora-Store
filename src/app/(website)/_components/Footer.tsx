@@ -55,9 +55,9 @@ export default function Footer() {
             Shop
           </h3>
           <ul className="space-y-2">
-            <li><Link href="/products/men" className="hover:text-orange-500">Men&apos; Wear</Link></li>
-            <li><Link href="/products/women" className="hover:text-orange-500">Women&apos;Wear</Link></li>
-            <li><Link href="/products/kids" className="hover:text-orange-500">Kid&apos; Wear</Link></li>
+            <li><Link href="/products/men" className="hover:text-orange-500">Men&apos;s Wear</Link></li>
+            <li><Link href="/products/women" className="hover:text-orange-500">Women&apos;s Wear</Link></li>
+            <li><Link href="/products/kids" className="hover:text-orange-500">Kid&apos;s Wear</Link></li>
             <li><Link href="/products/accessories" className="hover:text-orange-500">Accessories</Link></li>
           </ul>
         </div>

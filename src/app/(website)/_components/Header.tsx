@@ -216,8 +216,8 @@ const Header = () => {
                     href={link.href}
                     className={`text-lg font-semibold transition-all duration-300 ${
                       pathname === link.href
-                        ? "text-orange-500 border-l-3 border-orange-500 pl-1 hover:translate-x-2"
-                        : "text-base-700 hover:text-orange-500 hover:translate-x-2"
+                        ? "text-orange-500 border-l-3 border-orange-500 pl-1 hover:translate-x-2 ml-1"
+                        : "text-base-700 hover:text-orange-500 hover:translate-x-2 ml-1"
                     }`}
                   >
                     {link.label}
