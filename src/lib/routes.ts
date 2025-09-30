@@ -1,7 +1,9 @@
 const PATHS = {
   HOME: "/",
   PRODUCTS: "/products",
-  // PRODUCT: (id: string) => `/products/${id}`,
+  ABOUT: "/about",
+  FAQ: "/faqs",
+  CONTACT: "/contact",
 };
 
 export default PATHS;
