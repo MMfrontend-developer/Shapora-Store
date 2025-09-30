@@ -7,6 +7,7 @@ import { useState } from "react";
 import { products } from "../data";
 import { Button } from "@/components/ui/button";
 import Footer from "../../_components/Footer";
+import PromoBanner from "../../_components/PromoBannerProps";
 
 export default function ProductPage() {
   const params = useParams();
@@ -21,6 +22,13 @@ export default function ProductPage() {
 
   return (
     <div>
+         {/* Promo Banner */}
+              <PromoBanner
+                prefix="Get"
+                highlight="15% off"
+                suffix="on your first order!"
+              />
+
     <main className="container mx-auto px-4 py-10 grid md:grid-cols-2 gap-12">
       {/* Product Gallery */}
       <div>
@@ -55,7 +63,7 @@ export default function ProductPage() {
         <p className="text-2xl text-orange-600 font-semibold mb-6">
           ${product.price}
         </p>
-        <p className="text-gray-600 mb-6">{product.description}</p>
+        <p className="text-gray-900 font-medium mb-6">{product.description}</p>
 
         {/* Size Selector */}
         <div className="mb-6">

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Footer from "../_components/Footer";
+import PromoBanner from "../_components/PromoBannerProps";
 
 const products = [
   {
@@ -97,6 +98,13 @@ export default function ProductsPage() {
 
   return (
     <div>
+   {/* Promo Banner */}
+              <PromoBanner
+                prefix="Get"
+                highlight="15% off"
+                suffix="on your first order!"
+              />
+              
       <main className="container mx-auto px-4 py-10">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-10">
