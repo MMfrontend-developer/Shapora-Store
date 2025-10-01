@@ -115,7 +115,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
-            className="bg-gray-300 rounded-xl p-6 shadow-md hover:shadow-lg transition"
+            className="bg-gray-300 rounded-xl p-6 shadow-md hover:shadow-lg active:shadow-lg transition"
           >
             <div className="text-4xl mb-4">{value.icon}</div>
             <h3 className="font-semibold text-xl mb-2">{value.title}</h3>
@@ -163,7 +163,7 @@ export default function AboutPage() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="group [perspective:1000px]"
             >
-              <div className="relative w-full h-80 transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+              <div className="relative w-full h-80 transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] active:[transform:rotateY(180deg)]">
                 {/* Front */}
                 <div className="absolute inset-0 bg-gray-100 rounded-xl shadow-md overflow-hidden backface-hidden">
                   <div className="relative w-full h-48">
@@ -185,8 +185,8 @@ export default function AboutPage() {
                   <h3 className="font-semibold text-xl mb-2">{member.name}</h3>
                   <p className="text-sm">{member.bio}</p>
                   <div className="flex justify-center gap-4 mt-4">
-                    <a href="#" className="hover:underline">LinkedIn</a>
-                    <a href="#" className="hover:underline">Twitter</a>
+                    <a href="#" className="hover:underline active:underline">LinkedIn</a>
+                    <a href="#" className="hover:underline active:underline">Twitter</a>
                   </div>
                 </div>
               </div>

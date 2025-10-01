@@ -50,7 +50,7 @@ export default function NewArrivals() {
                 src={product.image}
                 alt={product.name}
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                className="object-cover group-hover:scale-105  active:scale-95 transition-transform duration-500"
               />
             </div>
             <div className="p-4 flex flex-col items-center">

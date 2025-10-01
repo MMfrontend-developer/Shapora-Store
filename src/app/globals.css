@@ -7,11 +7,11 @@ body{
 }
 
 a {
-  @apply  hover:text-orange-600;
+  @apply  hover:text-orange-600 active:text-orange-600;
 }
 
 .btn{
-  @apply hover:bg-orange-600 text-white ease-in-out duration-500;
+  @apply hover:bg-orange-600 active:bg-orange-600  text-white ease-in-out duration-500;
  }
 
 input {

@@ -40,14 +40,14 @@ export default function ContactPage() {
           <p className="text-gray-800 font-semibold mb-4">📧 support@shapora.com</p>
           <p className="text-gray-800 font-semibold mb-6">📞 +234 708 352 8377</p>
 
-          <div className="flex gap-4 text-gray-800 foont-semibold">
-            <a href="#" className="hover:text-orange-500 transition">
+          <div className="flex gap-4 text-gray-800 font-semibold">
+            <a href="#" className="hover:text-orange-500 active:text-orange-500 transition">
               LinkedIn
             </a>
-            <a href="#" className="hover:text-orange-500 transition">
+            <a href="#" className="hover:text-orange-500 active:text-orange-500 transition">
               Twitter
             </a>
-            <a href="#" className="hover:text-orange-500 transition">
+            <a href="#" className="hover:text-orange-500 active:text-orange-500 transition">
               Instagram
             </a>
           </div>

@@ -59,7 +59,7 @@ const Header = () => {
               className={`text-base font-semibold transition-colors ${
                 pathname === link.href
                   ? "text-orange-500 border-b-2 border-orange-500"
-                  : "text-base-700 hover:text-orange-500"
+                  : "text-base-700 hover:text-orange-500 active:text-orange-500"
               }`}
             >
               {link.label}
@@ -72,7 +72,7 @@ const Header = () => {
           {/* User Modal */}
           <Dialog>
             <DialogTrigger asChild>
-              <button className="p-2 rounded-full hover:bg-gray-100">
+              <button className="p-2 rounded-full hover:bg-gray-100 active:bg-gray-100">
                 <User size={24} />
               </button>
             </DialogTrigger>
@@ -82,7 +82,7 @@ const Header = () => {
                   Login
                 </DialogTitle>
                 <DialogClose asChild>
-                  <button className="p-1 rounded-full hover:bg-gray-100">
+                  <button className="p-1 rounded-full hover:bg-gray-100 active:bg-gray-100">
                     <X size={20} />
                   </button>
                 </DialogClose>
@@ -124,7 +124,7 @@ const Header = () => {
                     type="button"
                     aria-label={showPassword ? "Hide password" : "Show password"}
                     onClick={() => setShowPassword((v) => !v)}
-                    className="absolute right-2 top-10 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 focus:outline-none"
+                    className="absolute right-2 top-10 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 active:text-gray-700 focus:outline-none"
                     tabIndex={0}
                   >
                     {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
@@ -139,7 +139,7 @@ const Header = () => {
                     />
                     <Label htmlFor="remember">Remember Me</Label>
                   </div>
-                  <a href="#" className="text-sm text-blue-600 hover:underline">
+                  <a href="#" className="text-sm text-blue-600 hover:underline active:underline">
                     Lost your password?
                   </a>
                 </div>
@@ -154,7 +154,7 @@ const Header = () => {
           {/* Cart Drawer */}
           <Sheet>
             <SheetTrigger asChild>
-              <button className="p-2 rounded-full hover:bg-gray-100">
+              <button className="p-2 rounded-full hover:bg-gray-100 active:bg-gray-100">
                  <CartIcon />
               </button>
             </SheetTrigger>
@@ -165,7 +165,7 @@ const Header = () => {
               <SheetHeader className="flex flex-row items-center justify-between">
                 <SheetTitle>Your Cart</SheetTitle>
                 <SheetClose asChild>
-                  <button className="p-1 rounded-full hover:bg-gray-100">
+                  <button className="p-1 rounded-full hover:bg-gray-100 active:bg-gray-100">
                     <X size={20} />
                   </button>
                 </SheetClose>
@@ -188,7 +188,7 @@ const Header = () => {
           {/* Hamburger menu */}
           <Sheet>
             <SheetTrigger asChild>
-              <button className="p-2 rounded-full hover:bg-gray-100">
+              <button className="p-2 rounded-full hover:bg-gray-100 active:bg-gray-100">
                 <svg
                   width="28"
                   height="28"
@@ -217,7 +217,7 @@ const Header = () => {
                     className={`text-lg font-semibold transition-all duration-300 ${
                       pathname === link.href
                         ? "text-orange-500 border-l-3 border-orange-500 pl-1 hover:translate-x-2 ml-1"
-                        : "text-base-700 hover:text-orange-500 hover:translate-x-2 ml-1"
+                        : "text-base-700 hover:text-orange-500 active:text-orange-500 hover:translate-x-2 ml-1 active:translate-x-2"
                     }`}
                   >
                     {link.label}
@@ -233,7 +233,7 @@ const Header = () => {
           {/* User Modal */}
           <Dialog>
             <DialogTrigger asChild>
-              <button className="p-2 rounded-full hover:bg-gray-100">
+              <button className="p-2 rounded-full hover:bg-gray-100 active:bg-gray-100">
                 <User size={24} />
               </button>
             </DialogTrigger>
@@ -243,7 +243,7 @@ const Header = () => {
                   Login
                 </DialogTitle>
                 <DialogClose asChild>
-                  <button className="p-1 rounded-full hover:bg-gray-100">
+                  <button className="p-1 rounded-full hover:bg-gray-100 active:bg-gray-100">
                     <X size={20} />
                   </button>
                 </DialogClose>
@@ -285,7 +285,7 @@ const Header = () => {
                     type="button"
                     aria-label={showPassword ? "Hide password" : "Show password"}
                     onClick={() => setShowPassword((v) => !v)}
-                    className="absolute right-2 top-10 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 focus:outline-none"
+                    className="absolute right-2 top-10 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 active:text-gray-700 focus:outline-none"
                     tabIndex={0}
                   >
                     {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
@@ -315,7 +315,7 @@ const Header = () => {
           {/* Cart Drawer */}
           <Sheet>
             <SheetTrigger asChild>
-              <button className="p-2 rounded-full hover:bg-gray-100">
+              <button className="p-2 rounded-full hover:bg-gray-100 active:bg-gray-100">
                  <CartIcon />
               </button>
             </SheetTrigger>
@@ -326,7 +326,7 @@ const Header = () => {
               <SheetHeader className="flex flex-row items-center justify-between">
                 <SheetTitle>Your Cart</SheetTitle>
                 <SheetClose asChild>
-                  <button className="p-1 rounded-full hover:bg-gray-100">
+                  <button className="p-1 rounded-full hover:bg-gray-100 active:bg-gray-100">
                     <X size={20} />
                   </button>
                 </SheetClose>

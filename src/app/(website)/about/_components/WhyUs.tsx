@@ -54,7 +54,7 @@ export default function WhyUs({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition duration-300 h-full"
+              className="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg active:shadow-lg transition duration-300 h-full"
             >
               <div className="flex justify-center mb-4">{feature.icon}</div>
               <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>

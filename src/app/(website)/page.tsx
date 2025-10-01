@@ -65,7 +65,7 @@ export default function HomePage() {
             <span className="font-semibold">Kids</span> – crafted for comfort,
             designed for confidence.
           </p>
-          <Button className="mt-6 bg-orange-500 hover:bg-orange-600 text-white text-lg px-10 py-5 rounded-full">
+          <Button className="mt-6 bg-orange-500 hover:bg-orange-600 active:bg-orange-600 text-white text-lg px-10 py-5 rounded-full">
             Explore the Collection
           </Button>
         </div>

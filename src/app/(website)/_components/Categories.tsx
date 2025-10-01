@@ -50,7 +50,7 @@ export default function Categories() {
               style={{ backgroundImage: `url(${category.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
               {/* Overlay for readability */}
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300" />
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 active:bg-black/20 transition-all duration-300" />
               <div className="relative z-10 flex flex-col items-center justify-center h-full w-full">
                 <h3 className="text-xl font-semibold drop-shadow-lg">{category.name}</h3>
                 <Link href={category.href}>

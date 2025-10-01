@@ -21,16 +21,16 @@ export default function Footer() {
           {/* Socials */}
           <div className="flex items-center gap-4 mt-6">
             <Link href="#">
-              <FaInstagram className="w-6 h-6 hover:text-orange-500 transition" />
+              <FaInstagram className="w-6 h-6 hover:text-orange-500 active:text-orange-500 transition" />
             </Link>
             <Link href="#">
-              <FaFacebook className="w-6 h-6 hover:text-orange-500 transition" />
+              <FaFacebook className="w-6 h-6 hover:text-orange-500 active:text-orange-500 transition" />
             </Link>
             <Link href="#">
-              <FaLinkedin className="w-6 h-6 hover:text-orange-500 transition" />
+              <FaLinkedin className="w-6 h-6 hover:text-orange-500 active:text-orange-500 transition" />
             </Link>
             <Link href="#">
-              <FaTwitter className="w-6 h-6 hover:text-orange-500 transition" />
+              <FaTwitter className="w-6 h-6 hover:text-orange-500 active:text-orange-500 transition" />
             </Link>
           </div>
         </div>
@@ -41,11 +41,11 @@ export default function Footer() {
             Quick Links
           </h3>
           <ul className="space-y-2">
-            <li><Link href="/" className="hover:text-orange-500">Home</Link></li>
-            <li><Link href="/products" className="hover:text-orange-500">Products</Link></li>
-            <li><Link href="/about" className="hover:text-orange-500">About</Link></li>
-            <li><Link href="/faq's" className="hover:text-orange-500">Faq&apos;s</Link></li>
-            <li><Link href="/contact" className="hover:text-orange-500">Contact</Link></li>
+            <li><Link href="/" className="hover:text-orange-500 active:text-orange-500">Home</Link></li>
+            <li><Link href="/products" className="hover:text-orange-500 active:text-orange-500">Products</Link></li>
+            <li><Link href="/about" className="hover:text-orange-500 active:text-orange-500">About</Link></li>
+            <li><Link href="/faq's" className="hover:text-orange-500 active:text-orange-500">Faq&apos;s</Link></li>
+            <li><Link href="/contact" className="hover:text-orange-500 active:text-orange-500">Contact</Link></li>
           </ul>
         </div>
 
@@ -55,10 +55,10 @@ export default function Footer() {
             Shop
           </h3>
           <ul className="space-y-2">
-            <li><Link href="/products/men" className="hover:text-orange-500">Men&apos;s Wear</Link></li>
-            <li><Link href="/products/women" className="hover:text-orange-500">Women&apos;s Wear</Link></li>
-            <li><Link href="/products/kids" className="hover:text-orange-500">Kid&apos;s Wear</Link></li>
-            <li><Link href="/products/accessories" className="hover:text-orange-500">Accessories</Link></li>
+            <li><Link href="/products/men" className="hover:text-orange-500 active:text-orange-500">Men&apos;s Wear</Link></li>
+            <li><Link href="/products/women" className="hover:text-orange-500 active:text-orange-500">Women&apos;s Wear</Link></li>
+            <li><Link href="/products/kids" className="hover:text-orange-500 active:text-orange-500">Kid&apos;s Wear</Link></li>
+            <li><Link href="/products/accessories" className="hover:text-orange-500 active:text-orange-500">Accessories</Link></li>
           </ul>
         </div>
 
@@ -68,14 +68,14 @@ export default function Footer() {
             Help & Account
           </h3>
           <ul className="space-y-2">
-            <li><Link href="/faq" className="hover:text-orange-500">FAQ’s</Link></li>
-            <li><Link href="/returns" className="hover:text-orange-500">Return Policy</Link></li>
-            <li><Link href="/orders" className="hover:text-orange-500">Order Status</Link></li>
-            <li><Link href="/shipping" className="hover:text-orange-500">Shipping & Delivery</Link></li>
-            <li><Link href="/account" className="hover:text-orange-500">My Account</Link></li>
-            <li><Link href="/track" className="hover:text-orange-500">Track Order</Link></li>
-            <li><Link href="/cart" className="hover:text-orange-500">My Cart</Link></li>
-            <li><Link href="/history" className="hover:text-orange-500">Order History</Link></li>
+            <li><Link href="/faq" className="hover:text-orange-500 active:text-orange-500">FAQ’s</Link></li>
+            <li><Link href="/returns" className="hover:text-orange-500 active:text-orange-500">Return Policy</Link></li>
+            <li><Link href="/orders" className="hover:text-orange-500 active:text-orange-500">Order Status</Link></li>
+            <li><Link href="/shipping" className="hover:text-orange-500 active:text-orange-500">Shipping & Delivery</Link></li>
+            <li><Link href="/account" className="hover:text-orange-500 active:text-orange-500">My Account</Link></li>
+            <li><Link href="/track" className="hover:text-orange-500 active:text-orange-500">Track Order</Link></li>
+            <li><Link href="/cart" className="hover:text-orange-500 active:text-orange-500">My Cart</Link></li>
+            <li><Link href="/history" className="hover:text-orange-500 active:text-orange-500">Order History</Link></li>
           </ul>
         </div>
       </div>

@@ -76,7 +76,7 @@ export default function ProductPage() {
                 className={`px-4 py-2 rounded-md border transition ${
                   selectedSize === size
                     ? "bg-orange-500 text-white border-orange-500"
-                    : "border-gray-300 hover:border-orange-500"
+                    : "border-gray-300 hover:border-orange-500 active:border-orange-500"
                 }`}
               >
                 {size}
@@ -87,10 +87,10 @@ export default function ProductPage() {
 
         {/* Action Buttons */}
         <div className="flex gap-4">
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3">
+          <Button className="bg-orange-500 hover:bg-orange-600 active:bg-orange-600 text-white px-6 py-3">
             Add to Cart
           </Button>
-          <Button className="bg-black hover:bg-gray-900 text-white px-6 py-3">
+          <Button className="bg-black hover:bg-gray-900 active:bg-gray-900 text-white px-6 py-3">
             Buy Now
           </Button>
         </div>

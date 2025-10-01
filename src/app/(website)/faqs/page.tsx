@@ -88,7 +88,7 @@ export default function FAQsPage() {
         </p>
         <a
           href="/contact"
-          className="inline-block bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition"
+          className="inline-block bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 active:bg-gray-800 transition"
         >
           Contact Us
         </a>

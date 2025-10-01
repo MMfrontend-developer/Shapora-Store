@@ -140,7 +140,7 @@ export default function ProductsPage() {
                     src={product.image}
                     alt={product.name}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105 active:scale-105"
                   />
                 </div>
               </Link>
