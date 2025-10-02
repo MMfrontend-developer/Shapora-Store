@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import PromoBanner from "../_components/PromoBannerProps";
@@ -124,8 +125,8 @@ export default function AboutPage() {
         ))}
       </section>
 
-       {/* Meet the Team */}
-      <section>
+            {/* Meet the Team */}
+       <section>
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -155,45 +156,55 @@ export default function AboutPage() {
               image: "/Noora Jadeed.jpg",
               bio: "Expert in branding and marketing strategies that engage audiences.",
             },
-          ].map((member, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="group [perspective:1000px]"
-            >
-              <div className="relative w-full h-80 transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] active:[transform:rotateY(180deg)]">
-                {/* Front */}
-                <div className="absolute inset-0 bg-gray-100 rounded-xl shadow-md overflow-hidden backface-hidden">
-                  <div className="relative w-full h-48">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-6 text-center">
-                    <h3 className="font-semibold text-xl">{member.name}</h3>
-                    <p className="text-gray-600">{member.role}</p>
-                  </div>
-                </div>
+          ].map((member, index) => {
+            const [flipped, setFlipped] = useState(false);
 
-                {/* Back */}
-                <div className="absolute inset-0 bg-gray-900 text-white rounded-xl shadow-md p-6 flex flex-col items-center justify-center text-center [transform:rotateY(180deg)] backface-hidden">
-                  <h3 className="font-semibold text-xl mb-2">{member.name}</h3>
-                  <p className="text-sm">{member.bio}</p>
-                  <div className="flex justify-center gap-4 mt-4">
-                    <a href="#" className="hover:underline active:underline">LinkedIn</a>
-                    <a href="#" className="hover:underline active:underline">Twitter</a>
+
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                className="group [perspective:1000px]"
+                onClick={() => setFlipped(!flipped)} // mobile toggle
+              >
+                <div
+                  className={`relative w-full h-80 transition-transform duration-700 [transform-style:preserve-3d]
+                    ${flipped ? "[transform:rotateY(180deg)]" : "group-hover:[transform:rotateY(180deg)]"}`}
+                >
+                  {/* Front */}
+                  <div className="absolute inset-0 bg-gray-100 rounded-xl shadow-md overflow-hidden backface-hidden">
+                    <div className="relative w-full h-48">
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="p-6 text-center">
+                      <h3 className="font-semibold text-xl">{member.name}</h3>
+                      <p className="text-gray-600">{member.role}</p>
+                    </div>
+                  </div>
+
+                  {/* Back */}
+                  <div className="absolute inset-0 bg-gray-900 text-white rounded-xl shadow-md p-6 flex flex-col items-center justify-center text-center [transform:rotateY(180deg)] backface-hidden">
+                    <h3 className="font-semibold text-xl mb-2">{member.name}</h3>
+                    <p className="text-sm">{member.bio}</p>
+                    <div className="flex justify-center gap-4 mt-4">
+                      <a href="#" className="hover:underline active:underline">LinkedIn</a>
+                      <a href="#" className="hover:underline active:underline">Twitter</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
       </section>
+
       
         {/* Why Us Section */}
      <div>

@@ -85,7 +85,7 @@ export default function DiscountSection() {
           </div>
         </div>
 
-        <Button className="bg-orange-500 hover:bg-orange-600 text-white text-lg px-8 py-4 rounded-full shadow-md">
+        <Button className="bg-orange-500 btn text-white text-lg px-8 py-4 rounded-full shadow-md">
           Shop the Summer Sale
         </Button>
       </div>

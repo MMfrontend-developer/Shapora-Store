@@ -40,7 +40,7 @@ export default function StoreBenefits() {
               key={benefit.id}
               className="bg-gray-800 rounded-xl shadow-lg p-8 flex flex-col items-center text-center 
                          transition-all duration-500 ease-in-out 
-                         hover:scale-105 hover:shadow-2xl"
+                         hover:scale-105 active:scale-105 hover:shadow-2xl active-shadow-2xl"
             >
               {/* Icon */}
               <div className="w-16 h-16 flex items-center justify-center rounded-full bg-orange-100 text-orange-600 mb-6">
