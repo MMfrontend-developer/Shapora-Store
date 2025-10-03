@@ -42,7 +42,7 @@ const Header = () => {
   const [showPassword, setShowPassword] = React.useState(false);
   return (
     <div className="w-full border-b bg-white shadow-md sticky top-0 z-50">
-        <header className="container flex items-center justify-between px-4 py-1 sm:px-6 sm:py-4 mx-auto">
+      <header className="container flex items-center justify-between px-4 py-1 sm:px-6 sm:py-4 mx-auto">
         {/* Logo */}
         <img
           src="/shapora-logo.png"
@@ -122,7 +122,9 @@ const Header = () => {
                   />
                   <button
                     type="button"
-                    aria-label={showPassword ? "Hide password" : "Show password"}
+                    aria-label={
+                      showPassword ? "Hide password" : "Show password"
+                    }
                     onClick={() => setShowPassword((v) => !v)}
                     className="absolute right-2 top-10 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 active:text-gray-700 focus:outline-none"
                     tabIndex={0}
@@ -139,7 +141,10 @@ const Header = () => {
                     />
                     <Label htmlFor="remember">Remember Me</Label>
                   </div>
-                  <a href="#" className="text-sm text-blue-600 hover:underline active:underline">
+                  <a
+                    href="#"
+                    className="text-sm text-blue-600 hover:underline active:underline"
+                  >
                     Lost your password?
                   </a>
                 </div>
@@ -155,7 +160,7 @@ const Header = () => {
           <Sheet>
             <SheetTrigger asChild>
               <button className="p-2 rounded-full hover:bg-gray-100 active:bg-gray-100">
-                 <CartIcon />
+                <CartIcon />
               </button>
             </SheetTrigger>
             <SheetContent
@@ -211,17 +216,18 @@ const Header = () => {
               </SheetHeader>
               <nav className="flex flex-col gap-4 mt-6 p-1">
                 {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={`text-lg font-semibold transition-all duration-300 ${
-                      pathname === link.href
-                        ? "text-orange-500 border-l-3 border-orange-500 pl-1 hover:translate-x-2 ml-1"
-                        : "text-base-700 hover:text-orange-500 active:text-orange-500 hover:translate-x-2 ml-1 active:translate-x-2"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
+                  <SheetClose asChild key={link.href}>
+                    <Link
+                      href={link.href}
+                      className={`text-lg font-semibold transition-all duration-300 ${
+                        pathname === link.href
+                          ? "text-orange-500 border-l-3 border-orange-500 pl-1 hover:translate-x-2 ml-1"
+                          : "text-base-700 hover:text-orange-500 active:text-orange-500 hover:translate-x-2 ml-1 active:translate-x-2"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  </SheetClose>
                 ))}
               </nav>
             </SheetContent>
@@ -283,7 +289,9 @@ const Header = () => {
                   />
                   <button
                     type="button"
-                    aria-label={showPassword ? "Hide password" : "Show password"}
+                    aria-label={
+                      showPassword ? "Hide password" : "Show password"
+                    }
                     onClick={() => setShowPassword((v) => !v)}
                     className="absolute right-2 top-10 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 active:text-gray-700 focus:outline-none"
                     tabIndex={0}
@@ -316,7 +324,7 @@ const Header = () => {
           <Sheet>
             <SheetTrigger asChild>
               <button className="p-2 rounded-full hover:bg-gray-100 active:bg-gray-100">
-                 <CartIcon />
+                <CartIcon />
               </button>
             </SheetTrigger>
             <SheetContent

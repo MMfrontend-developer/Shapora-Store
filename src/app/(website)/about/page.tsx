@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useState } from "react";
@@ -157,10 +158,9 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="relative w-full h-[350px] rounded-lg overflow-hidden shadow-lg"
           >
-            <Image
-              src="/about-us.jpg"
+            <img
+              src="/about-us-two.jpg"
               alt="About Shapora"
-              fill
               className="object-cover"
             />
           </motion.div>
