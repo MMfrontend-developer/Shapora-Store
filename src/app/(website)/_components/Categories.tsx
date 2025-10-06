@@ -46,7 +46,7 @@ export default function Categories() {
           {categories.map((category) => (
             <div
               key={category.id}
-              className="relative rounded-lg overflow-hidden shadow-md hover:shadow-lg active:shadow-lg transition bg-black/70 text-white flex flex-col justify-between items-center h-52 group"
+              className="relative rounded-lg overflow-hidden shadow-md hover:shadow-lg active:shadow-xl focus:shadow-xl transition bg-black/70 text-white flex flex-col justify-between items-center h-52 group"
               style={{ backgroundImage: `url(${category.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
               {/* Overlay for readability */}
