@@ -1,4 +1,7 @@
+// src/constants/paths.ts
+
 const PATHS = {
+  // === Website Routes ===
   HOME: "/",
   PRODUCTS: "/products",
   ABOUT: "/about",
@@ -7,3 +10,7 @@ const PATHS = {
 };
 
 export default PATHS;
+
+
+
+

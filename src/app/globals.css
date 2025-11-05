@@ -14,9 +14,9 @@ a {
   @apply hover:bg-orange-600 active:bg-orange-600  text-white ease-in-out duration-500;
  }
 
-input {
-  @apply border-2 border-gray-400 focus:border-orange-500 focus:ring-2 focus:ring-orange-200;
-}
+/* input {
+  @apply focus:border-orange-500 focus:ring-2 focus:ring-orange-200;
+} */
 
 
 

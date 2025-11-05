@@ -23,7 +23,6 @@ import {
   SheetClose,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import Link from "next/link";
@@ -99,11 +98,11 @@ const Header = () => {
                   >
                     Username or Email Address
                   </Label>
-                  <Input
+                  <input
                     id="email"
                     type="email"
                     placeholder="you@example.com"
-                    className="border-2 border-gray-400 focus:border-orange-500 focus:ring-2 focus:ring-orange-200"
+                    className="w-full border border-gray-400 rounded-md px-2 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
                   />
                 </div>
 
@@ -114,11 +113,11 @@ const Header = () => {
                   >
                     Password
                   </Label>
-                  <Input
+                  <input
                     id="password"
                     type={showPassword ? "text" : "password"}
                     placeholder="••••••••"
-                    className="border-2 border-gray-400 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 pr-10"
+                    className="w-full border border-gray-400 rounded-md px-2 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
                   />
                   <button
                     type="button"
@@ -126,7 +125,7 @@ const Header = () => {
                       showPassword ? "Hide password" : "Show password"
                     }
                     onClick={() => setShowPassword((v) => !v)}
-                    className="absolute right-2 top-10 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 active:text-gray-700 focus:outline-none"
+                    className="absolute right-2 top-11 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 active:text-gray-700 focus:outline-none"
                     tabIndex={0}
                   >
                     {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
@@ -266,11 +265,9 @@ const Header = () => {
                   >
                     Username or Email Address
                   </Label>
-                  <Input
-                    id="email"
+                  <input
                     type="email"
-                    placeholder="you@example.com"
-                    className="border-2 border-gray-400 focus:border-orange-500 focus:ring-2 focus:ring-orange-200"
+                    className="w-full border border-gray-400 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-orange-500"
                   />
                 </div>
 
@@ -281,11 +278,11 @@ const Header = () => {
                   >
                     Password
                   </Label>
-                  <Input
+                  <input
                     id="password"
                     type={showPassword ? "text" : "password"}
                     placeholder="••••••••"
-                    className="border-2 border-gray-400 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 pr-10"
+                    className="w-full border border-gray-400 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-orange-500"
                   />
                   <button
                     type="button"
