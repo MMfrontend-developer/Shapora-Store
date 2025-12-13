@@ -1,10 +1,10 @@
 📦 Shapora – Modern E-Commerce Store
 
-Shapora is a modern e-commerce web application built with Next.js 15, TypeScript, and Tailwind CSS. It features a responsive UI, dynamic product pages, authentication modals, and a sleek shopping cart drawer.
+Shapora is a modern e-commerce web application built with Next.js 16, TypeScript, and Tailwind CSS. It features a responsive UI, dynamic product pages, authentication modals, and a sleek shopping cart drawer.
 
 🚀 Features
 
-⚡ Next.js 15 + App Router – optimized for performance & SEO
+⚡ Next.js 16 + App Router – optimized for performance & SEO
 
 🎨 Tailwind CSS – fully responsive, utility-first styling
 
@@ -20,7 +20,7 @@ Shapora is a modern e-commerce web application built with Next.js 15, TypeScript
 
 🛠️ Tech Stack
 
-Framework: Next.js 15 (App Router)
+Framework: Next.js 16 (App Router)
 
 Language: TypeScript
 
