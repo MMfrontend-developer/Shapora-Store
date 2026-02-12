@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Header from "./_components/Header";
 export const metadata: Metadata = {
   title: "Shapora E-Commerce Store",
-  description: "An e-commerce website built with Next.js and TailwindCSS",
+  description: "An e-commerce website for fashion",
 };
 
 export default function RootLayout({

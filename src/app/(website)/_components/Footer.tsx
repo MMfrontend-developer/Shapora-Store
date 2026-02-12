@@ -44,7 +44,7 @@ export default function Footer() {
             <li><Link href="/" className="hover:text-orange-500 active:text-orange-500">Home</Link></li>
             <li><Link href="/products" className="hover:text-orange-500 active:text-orange-500">Products</Link></li>
             <li><Link href="/about" className="hover:text-orange-500 active:text-orange-500">About</Link></li>
-            <li><Link href="/faq's" className="hover:text-orange-500 active:text-orange-500">Faq&apos;s</Link></li>
+            <li><Link href="/faqs" className="hover:text-orange-500 active:text-orange-500">Faq&apos;s</Link></li>
             <li><Link href="/contact" className="hover:text-orange-500 active:text-orange-500">Contact</Link></li>
           </ul>
         </div>
@@ -68,7 +68,7 @@ export default function Footer() {
             Help & Account
           </h3>
           <ul className="space-y-2">
-            <li><Link href="/faq" className="hover:text-orange-500 active:text-orange-500">FAQ’s</Link></li>
+            <li><Link href="/faqs" className="hover:text-orange-500 active:text-orange-500">FAQ’s</Link></li>
             <li><Link href="/returns" className="hover:text-orange-500 active:text-orange-500">Return Policy</Link></li>
             <li><Link href="/orders" className="hover:text-orange-500 active:text-orange-500">Order Status</Link></li>
             <li><Link href="/shipping" className="hover:text-orange-500 active:text-orange-500">Shipping & Delivery</Link></li>

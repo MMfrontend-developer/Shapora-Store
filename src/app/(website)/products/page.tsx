@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { AddToCartButton } from "@/components/cart/AddToCartButton";
 import Footer from "../_components/Footer";
 import PromoBanner from "../_components/PromoBannerProps";
 
@@ -98,13 +99,13 @@ export default function ProductsPage() {
 
   return (
     <div>
-   {/* Promo Banner */}
-              <PromoBanner
-                prefix="Get"
-                highlight="15% off"
-                suffix="on your first order!"
-              />
-              
+      {/* Promo Banner */}
+      <PromoBanner
+        prefix="Get"
+        highlight="15% off"
+        suffix="on your first order!"
+      />
+
       <main className="container mx-auto px-4 py-10">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-10">
@@ -150,7 +151,7 @@ export default function ProductsPage() {
                 <p className="text-orange-500 font-bold mt-2">
                   ${product.price.toFixed(2)}
                 </p>
-                <Button className="mt-4 w-full btn">Add to Cart</Button>
+                <AddToCartButton product={product} className="mt-4 w-full" />
               </div>
             </motion.div>
           ))}

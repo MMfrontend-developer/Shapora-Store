@@ -2,9 +2,9 @@
 "use client";
 
 import React from "react";
-import CartIcon from "./CartIcon";
 import { usePathname } from "next/navigation";
 import { User, X, Eye, EyeOff } from "lucide-react";
+import { CartDrawer } from "@/components/cart/CartDrawer";
 import {
   Dialog,
   DialogContent,
@@ -26,6 +26,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import Link from "next/link";
+
 
 const Header = () => {
   const pathname = usePathname();
@@ -55,11 +56,10 @@ const Header = () => {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-base font-semibold transition-colors ${
-                pathname === link.href
-                  ? "text-orange-500 border-b-2 border-orange-500"
-                  : "text-base-700 hover:text-orange-500 active:text-orange-500"
-              }`}
+              className={`text-base font-semibold transition-colors ${pathname === link.href
+                ? "text-orange-500 border-b-2 border-orange-500"
+                : "text-base-700 hover:text-orange-500 active:text-orange-500"
+                }`}
             >
               {link.label}
             </Link>
@@ -156,38 +156,7 @@ const Header = () => {
           </Dialog>
 
           {/* Cart Drawer */}
-          <Sheet>
-            <SheetTrigger asChild>
-              <button className="p-2 rounded-full hover:bg-gray-100 active:bg-gray-100">
-                <CartIcon />
-              </button>
-            </SheetTrigger>
-            <SheetContent
-              side="right"
-              className="w-[300px] sm:w-[400px] flex flex-col [&>button.absolute]:hidden"
-            >
-              <SheetHeader className="flex flex-row items-center justify-between">
-                <SheetTitle>Your Cart</SheetTitle>
-                <SheetClose asChild>
-                  <button className="p-1 rounded-full hover:bg-gray-100 active:bg-gray-100">
-                    <X size={20} />
-                  </button>
-                </SheetClose>
-              </SheetHeader>
-
-              {/* Empty cart message centered */}
-              <div className="p-2 flex flex-col h-full">
-                <div className="flex-1 flex items-center justify-center">
-                  <p className="text-gray-500">No products in the cart</p>
-                </div>
-
-                {/* Continue Shopping button at bottom */}
-                <div className="mt-auto">
-                  <Button className="w-full btn">Continue Shopping</Button>
-                </div>
-              </div>
-            </SheetContent>
-          </Sheet>
+          <CartDrawer />
 
           {/* Hamburger menu */}
           <Sheet>
@@ -218,11 +187,10 @@ const Header = () => {
                   <SheetClose asChild key={link.href}>
                     <Link
                       href={link.href}
-                      className={`text-lg font-semibold transition-all duration-300 ${
-                        pathname === link.href
-                          ? "text-orange-500 border-l-3 border-orange-500 pl-1 hover:translate-x-2 ml-1"
-                          : "text-base-700 hover:text-orange-500 active:text-orange-500 hover:translate-x-2 ml-1 active:translate-x-2"
-                      }`}
+                      className={`text-lg font-semibold transition-all duration-300 ${pathname === link.href
+                        ? "text-orange-500 border-l-3 border-orange-500 pl-1 hover:translate-x-2 ml-1"
+                        : "text-base-700 hover:text-orange-500 active:text-orange-500 hover:translate-x-2 ml-1 active:translate-x-2"
+                        }`}
                     >
                       {link.label}
                     </Link>
@@ -318,38 +286,7 @@ const Header = () => {
           </Dialog>
 
           {/* Cart Drawer */}
-          <Sheet>
-            <SheetTrigger asChild>
-              <button className="p-2 rounded-full hover:bg-gray-100 active:bg-gray-100">
-                <CartIcon />
-              </button>
-            </SheetTrigger>
-            <SheetContent
-              side="right"
-              className="w-[300px] sm:w-[400px] flex flex-col [&>button.absolute]:hidden"
-            >
-              <SheetHeader className="flex flex-row items-center justify-between">
-                <SheetTitle>Your Cart</SheetTitle>
-                <SheetClose asChild>
-                  <button className="p-1 rounded-full hover:bg-gray-100 active:bg-gray-100">
-                    <X size={20} />
-                  </button>
-                </SheetClose>
-              </SheetHeader>
-
-              {/* Empty cart message centered */}
-              <div className="p-2 flex flex-col h-full">
-                <div className="flex-1 flex items-center justify-center">
-                  <p className="text-gray-500">No products in the cart</p>
-                </div>
-
-                {/* Continue Shopping button at bottom */}
-                <div className="mt-auto">
-                  <Button className="w-full btn">Continue Shopping</Button>
-                </div>
-              </div>
-            </SheetContent>
-          </Sheet>
+          <CartDrawer />
         </div>
       </header>
     </div>

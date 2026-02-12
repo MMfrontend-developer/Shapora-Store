@@ -1,14 +1,15 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+
 import Image from "next/image";
+import { AddToCartButton } from "@/components/cart/AddToCartButton";
 
 const newArrivals = [
   {
     id: 1,
     name: "Classic White T-Shirt",
     price: 25,
-    image: "/classic-white-Tshirt.jpg", // put inside /public/products
+    image: "/classic-white-Tshirt.jpg",
   },
   {
     id: 2,
@@ -58,9 +59,7 @@ export default function NewArrivals() {
               <p className="text-orange-500 font-bold mt-2">
                 ${product.price.toFixed(2)}
               </p>
-              <Button className="mt-4 w-full btn">
-                Add to Cart
-              </Button>
+              <AddToCartButton product={product} className="mt-4 w-full" />
             </div>
           </div>
         ))}
