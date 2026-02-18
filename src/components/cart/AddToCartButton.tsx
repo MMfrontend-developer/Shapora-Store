@@ -65,7 +65,7 @@ export const AddToCartButton = ({
             )}
             <Button
                 onClick={handleAddToCart}
-                className="flex-1 gap-2 bg-orange-500 hover:bg-orange-600"
+                className="flex-1 gap-2  hover:bg-orange-600 active:bg-orange-600 text-white ease-in-out duration-500"
             >
                 <ShoppingBag className="h-4 w-4" />
                 Add to Cart
