@@ -13,8 +13,8 @@ export default function DiscountSection() {
   });
 
   useEffect(() => {
-   const targetDate = new Date("2026-01-31T23:59:59").getTime();
- // set your end date here
+   const targetDate = new Date("2026-04-27T23:59:59").getTime();
+ 
 
     const timer = setInterval(() => {
       const now = new Date().getTime();

@@ -34,7 +34,7 @@ export const products: Product[] = [
     id: "3",
     name: "Kids Hoodie",
     price: 39.99,
-    images: ["/kid's-hoodie (1).jpg", "/kid's-hoodie (2).jpg", "/kid's-hoodie 3.jpg"],
+    images: ["/kid's-hoodie (1).jpg", "/kid's-hoodie (2).jpg", "/princess-hoodie.jpg"],
     description:
       "Soft and comfy hoodie for kids, perfect for casual wear or chilly days.",
     category: "Kids",
@@ -64,7 +64,7 @@ export const products: Product[] = [
     id: "6",
     name: "Hoodie", 
     price: 49.99,
-    images: ["/princess-hoodie.jpg"],
+    images: ["/hoodie.jpg"],
     description:
       "Stay cozy and stylish with our classic hoodie, perfect for layering.",
     category: "Kids",
