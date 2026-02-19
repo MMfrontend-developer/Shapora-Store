@@ -94,7 +94,7 @@ export default function ProductPage() {
               className="w-full md:w-auto"
             />
             <Button className="bg-black hover:bg-gray-900 active:bg-gray-900 text-white px-6 py-3">
-              Buy Now
+              Buy Now 
             </Button>
           </div>
         </div>

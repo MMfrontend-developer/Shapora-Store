@@ -5,6 +5,6 @@ export interface Product {
   image: string;
   images?: string[];
   description?: string;
-  category?: string;
+  category?: string | string[];
   sizes?: string[];
 }

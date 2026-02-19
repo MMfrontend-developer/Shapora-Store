@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 import CartIcon from "./CartIcon";
 
-// Mocked cart items – later we’ll connect with real state (like context or zustand)
+// Mocked cart items 
 const cartItems = [
   {
     id: 1,
