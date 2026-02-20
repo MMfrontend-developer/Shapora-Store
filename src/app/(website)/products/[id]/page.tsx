@@ -14,7 +14,7 @@ import PromoBanner from "../../_components/PromoBannerProps";
 export default function ProductPage() {
   const params = useParams();
   const router = useRouter();
-  const { addToCart } = useCart();
+  const { addToCart, setIsCartOpen } = useCart();
   const product = products.find((p) => p.id === params.id);
 
   const [selectedImage, setSelectedImage] = useState(
@@ -109,6 +109,7 @@ export default function ProductPage() {
                   1,
                   selectedSize ?? undefined
                 );
+                setIsCartOpen(false);
                 router.push("/checkout");
               }}
             >
