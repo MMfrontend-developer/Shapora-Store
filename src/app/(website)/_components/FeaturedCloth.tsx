@@ -2,15 +2,33 @@
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useCart } from "@/context/CartContext";
+
+const featuredProduct = {
+  id: "featured-outfit",
+  name: "Up & Down Outfit",
+  price: 129.99,
+  image: "/mens-wear.jpg",
+};
 
 export default function FeaturedCloth() {
+  const router = useRouter();
+  const { addToCart, setIsCartOpen } = useCart();
+
+  const handleBuyNow = () => {
+    addToCart(featuredProduct, 1);
+    setIsCartOpen(false);
+    router.push("/checkout");
+  };
+
   return (
     <section className="w-full py-16 bg-white">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
         {/* Left Side - Image */}
         <div className="md:col-span-3 relative w-full h-[500px] rounded-lg overflow-hidden shadow-md">
           <Image
-            src="/men’s-wear.jpg" // replace with your cloth image
+            src="/mens-wear.jpg"
             alt="Featured Outfit"
             fill
             className="object-cover"
@@ -27,7 +45,10 @@ export default function FeaturedCloth() {
               comfort and sophistication. Perfect for casual outings or special
               occasions.
             </p>
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-md">
+            <Button
+              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-md"
+              onClick={handleBuyNow}
+            >
               Shop Now
             </Button>
           </div>
