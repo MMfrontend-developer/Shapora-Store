@@ -12,6 +12,8 @@ import StoreBenefits from "./_components/StoreBenefits";
 import Footer from "./_components/Footer";
 import Partners from "./_components/Partners";
 import PromoBanner from "./_components/PromoBannerProps";
+import Link from "next/link";
+
 
 export default function HomePage() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -39,9 +41,8 @@ export default function HomePage() {
         {images.map((src, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentIndex ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute inset-0 transition-opacity duration-1000 ${index === currentIndex ? "opacity-100" : "opacity-0"
+              }`}
             style={{
               backgroundImage: `url(${src})`,
               backgroundSize: "cover",
@@ -65,9 +66,12 @@ export default function HomePage() {
             <span className="font-semibold">Kids</span> – crafted for comfort,
             designed for confidence.
           </p>
-          <Button className="mt-6 bg-orange-500 hover:bg-orange-600 active:bg-orange-600 text-white text-lg px-10 py-5 rounded-full">
-            Explore the Collection
-          </Button>
+          <Link href="/products">
+            <Button className="mt-6 bg-orange-500 hover:bg-orange-600 text-white text-lg px-10 py-5 rounded-full">
+              Shop All Products
+            </Button>
+          </Link>
+
         </div>
       </section>
 
