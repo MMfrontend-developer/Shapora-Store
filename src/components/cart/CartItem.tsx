@@ -25,6 +25,9 @@ export const CartItem = ({ item }: CartItemProps) => {
             </div>
             <div className="flex flex-col flex-1 gap-1">
                 <span className="font-medium truncate">{item.name}</span>
+                {item.selectedSize && (
+                    <span className="text-xs text-muted-foreground">Size: {item.selectedSize}</span>
+                )}
                 <span className="text-sm text-muted-foreground">
                     ${item.price.toFixed(2)}
                 </span>
@@ -34,7 +37,7 @@ export const CartItem = ({ item }: CartItemProps) => {
                             variant="ghost"
                             size="icon"
                             className="h-8 w-8 rounded-none"
-                            onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                            onClick={() => updateQuantity(item.cartItemId, item.quantity - 1)}
                             disabled={item.quantity <= 1}
                         >
                             <Minus className="h-3 w-3" />
@@ -44,7 +47,7 @@ export const CartItem = ({ item }: CartItemProps) => {
                             variant="ghost"
                             size="icon"
                             className="h-8 w-8 rounded-none"
-                            onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                            onClick={() => updateQuantity(item.cartItemId, item.quantity + 1)}
                         >
                             <Plus className="h-3 w-3" />
                         </Button>
@@ -53,7 +56,7 @@ export const CartItem = ({ item }: CartItemProps) => {
                         variant="ghost"
                         size="icon"
                         className="h-8 w-8 text-destructive ml-auto"
-                        onClick={() => removeFromCart(item.id)}
+                        onClick={() => removeFromCart(item.cartItemId)}
                     >
                         <Trash2 className="h-4 w-4" />
                     </Button>

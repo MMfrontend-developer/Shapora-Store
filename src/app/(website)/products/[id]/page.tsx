@@ -1,9 +1,10 @@
 // app/(website)/products/[id]/page.tsx
 "use client";
 
-import { useParams, notFound } from "next/navigation";
+import { useParams, useRouter, notFound } from "next/navigation";
 import Image from "next/image";
 import { useState } from "react";
+import { useCart } from "@/context/CartContext";
 import { products } from "../data";
 import { Button } from "@/components/ui/button";
 import { AddToCartButton } from "@/components/cart/AddToCartButton";
@@ -12,6 +13,8 @@ import PromoBanner from "../../_components/PromoBannerProps";
 
 export default function ProductPage() {
   const params = useParams();
+  const router = useRouter();
+  const { addToCart } = useCart();
   const product = products.find((p) => p.id === params.id);
 
   const [selectedImage, setSelectedImage] = useState(
@@ -86,15 +89,30 @@ export default function ProductPage() {
 
           {/* Action Buttons */}
           <div className="flex gap-4">
-            <AddToCartButton
-              product={{
-                ...product,
-                image: product.images[0]
+            <Button
+              className="flex-1 gap-2 hover:bg-orange-600 active:bg-orange-600 text-white ease-in-out duration-500"
+              onClick={() => {
+                addToCart(
+                  { ...product, image: product.images[0] },
+                  1,
+                  selectedSize ?? undefined
+                );
               }}
-              className="w-full md:w-auto"
-            />
-            <Button className="bg-black hover:bg-gray-900 active:bg-gray-900 text-white px-6 py-3">
-              Buy Now 
+            >
+              Add to Cart
+            </Button>
+            <Button
+              className="bg-black hover:bg-gray-900 active:bg-gray-900 text-white px-6 py-3"
+              onClick={() => {
+                addToCart(
+                  { ...product, image: product.images[0] },
+                  1,
+                  selectedSize ?? undefined
+                );
+                router.push("/checkout");
+              }}
+            >
+              Buy Now
             </Button>
           </div>
         </div>

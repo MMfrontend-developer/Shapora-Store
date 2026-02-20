@@ -48,7 +48,7 @@ export const CartDrawer = () => {
                     ) : (
                         <div className="flex flex-col gap-1">
                             {cartItems.map((item) => (
-                                <CartItem key={item.id} item={item} />
+                                <CartItem key={item.cartItemId} item={item} />
                             ))}
                         </div>
                     )}

@@ -87,7 +87,7 @@ export default function CheckoutPage() {
                             </TableHeader>
                             <TableBody>
                                 {cartItems.map((item) => (
-                                    <TableRow key={item.id}>
+                                    <TableRow key={item.cartItemId}>
                                         <TableCell className="flex items-center gap-4">
                                             <div className="relative h-16 w-16 overflow-hidden rounded-md border">
                                                 <Image
@@ -98,6 +98,9 @@ export default function CheckoutPage() {
                                                 />
                                             </div>
                                             <span className="font-medium">{item.name}</span>
+                                            {item.selectedSize && (
+                                                <span className="text-xs text-gray-500 ml-1">(Size: {item.selectedSize})</span>
+                                            )}
                                         </TableCell>
                                         <TableCell>${item.price.toFixed(2)}</TableCell>
                                         <TableCell>
@@ -105,7 +108,7 @@ export default function CheckoutPage() {
                                                 <button
                                                     className="px-3 py-1"
                                                     onClick={() =>
-                                                        updateQuantity(item.id, item.quantity - 1)
+                                                        updateQuantity(item.cartItemId, item.quantity - 1)
                                                     }
                                                     disabled={item.quantity <= 1}
                                                 >
@@ -115,7 +118,7 @@ export default function CheckoutPage() {
                                                 <button
                                                     className="px-3 py-1"
                                                     onClick={() =>
-                                                        updateQuantity(item.id, item.quantity + 1)
+                                                        updateQuantity(item.cartItemId, item.quantity + 1)
                                                     }
                                                 >
                                                     +
@@ -130,7 +133,7 @@ export default function CheckoutPage() {
                                                 variant="ghost"
                                                 size="icon"
                                                 className="text-destructive"
-                                                onClick={() => removeFromCart(item.id)}
+                                                onClick={() => removeFromCart(item.cartItemId)}
                                             >
                                                 <Trash2 className="h-4 w-4" />
                                             </Button>
