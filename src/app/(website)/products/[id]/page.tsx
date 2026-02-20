@@ -90,7 +90,7 @@ export default function ProductPage() {
           {/* Action Buttons */}
           <div className="flex gap-4">
             <Button
-              className="flex-1 gap-2 hover:bg-orange-600 active:bg-orange-600 text-white ease-in-out duration-500"
+              className="gap-2 hover:bg-orange-600 active:bg-orange-600 text-white ease-in-out duration-500"
               onClick={() => {
                 addToCart(
                   { ...product, image: product.images[0] },
