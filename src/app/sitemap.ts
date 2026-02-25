@@ -5,7 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://shapora-ecommerce.vercel.app'
 
     // Static routes
-    const routes = ['', '/products', '/about', '/contact', '/faqs'].map(
+    const routes = ['', '/products', '/about', '/contact', '/faqs', '/returns', '/shipping', '/orders', '/track', '/history'].map(
         (route) => ({
             url: `${baseUrl}${route}`,
             lastModified: new Date(),
