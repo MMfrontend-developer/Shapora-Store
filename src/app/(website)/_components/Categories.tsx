@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const categories = [
   {
@@ -89,14 +90,14 @@ function CategoryCard({
       transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
     >
       <Link href={category.href} className="block">
-        <div
-          className="relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 text-white h-56 group cursor-pointer"
-          style={{
-            backgroundImage: `url(${category.image})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
+        <div className="relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 text-white h-56 group cursor-pointer">
+          <Image
+            src={category.image}
+            alt={category.name}
+            fill
+            className="object-cover object-center"
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+          />
           {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent group-hover:from-black/50 group-hover:via-black/20 transition-all duration-300" />
 

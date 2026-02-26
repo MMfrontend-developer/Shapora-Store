@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React from "react";
@@ -26,6 +25,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import Link from "next/link";
+import Image from "next/image";
 
 
 const Header = () => {
@@ -44,10 +44,13 @@ const Header = () => {
     <div className="w-full border-b bg-white shadow-md sticky top-0 z-50">
       <header className="container flex items-center justify-between px-4 py-1 sm:px-6 sm:py-4 mx-auto">
         {/* Logo */}
-        <img
+        <Image
           src="/shapora-logo.png"
+          width={80}
+          height={80}
           className="h-20 w-auto sm:h-16 sm:w-20"
           alt="Shapora Logo"
+          priority
         />
 
         {/* Desktop Navigation */}

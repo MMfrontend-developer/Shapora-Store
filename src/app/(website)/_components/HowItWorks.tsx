@@ -1,5 +1,4 @@
 // components/HowItWorks.tsx
-"use client";
 
 import { ShoppingBag, Ruler, CreditCard } from "lucide-react";
 

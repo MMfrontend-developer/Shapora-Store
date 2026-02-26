@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React from "react";
@@ -12,6 +11,7 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
+import Image from "next/image";
 import CartIcon from "./CartIcon";
 
 // Mocked cart items 
@@ -67,9 +67,11 @@ const CartSheet = () => {
                   key={item.id}
                   className="flex items-center gap-3 border-b pb-2"
                 >
-                  <img
+                  <Image
                     src={item.image}
                     alt={item.name}
+                    width={64}
+                    height={64}
                     className="w-16 h-16 object-cover rounded-md"
                   />
                   <div className="flex-1">
@@ -92,7 +94,7 @@ const CartSheet = () => {
           <div className="mt-auto space-y-2">
             <Button className="w-full btn">Checkout</Button>
             <Button
-            //   variant="outline"
+              //   variant="outline"
               className="w-full btn"
             >
               Continue Shopping

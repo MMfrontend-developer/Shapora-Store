@@ -1,5 +1,4 @@
 // components/StoreBenefits.tsx
-"use client";
 
 import { Truck, ShieldCheck, Headphones } from "lucide-react";
 
