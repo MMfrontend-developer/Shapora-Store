@@ -7,7 +7,6 @@ import { useState } from "react";
 import { useCart } from "@/context/CartContext";
 import { products } from "../data";
 import { Button } from "@/components/ui/button";
-import { AddToCartButton } from "@/components/cart/AddToCartButton";
 import Footer from "../../_components/Footer";
 import PromoBanner from "../../_components/PromoBannerProps";
 
@@ -36,7 +35,7 @@ export default function ProductPage() {
       <main className="container mx-auto px-4 py-10 grid md:grid-cols-2 gap-12">
         {/* Product Gallery */}
         <div>
-          <div className="relative w-full h-[500px] rounded-lg overflow-hidden shadow-md">
+          <div className="relative w-full h-125 rounded-lg overflow-hidden shadow-md">
             <Image
               src={selectedImage}
               alt={product.name}

@@ -26,7 +26,7 @@ export default function FeaturedCloth() {
     <section className="w-full py-16 bg-white">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
         {/* Left Side - Image */}
-        <div className="md:col-span-3 relative w-full h-[500px] rounded-lg overflow-hidden shadow-md">
+        <div className="md:col-span-3 relative w-full h-125 rounded-lg overflow-hidden shadow-md">
           <Image
             src="/mens-wear.jpg"
             alt="Featured Outfit"
