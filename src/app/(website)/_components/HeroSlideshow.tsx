@@ -47,7 +47,7 @@ export default function HeroSlideshow({ images }: { images: string[] }) {
                     Discover timeless fashion for{" "}
                     <span className="font-semibold">Men</span>,{" "}
                     <span className="font-semibold">Women</span>, and{" "}
-                    <span className="font-semibold">Kids</span> – crafted for comfort,
+                    <span className="font-semibold">Kids</span> crafted for comfort,
                     designed for confidence.
                 </p>
                 <Link href="/products">
